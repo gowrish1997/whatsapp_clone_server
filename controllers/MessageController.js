@@ -203,7 +203,7 @@ export const getInitialContactsWithMessages = async (req, res, next) => {
         users.set(contactId, { ...user });
       } else if (messageStatus !== "read" && !isSender) {
         const user = users.get(contactId);
-        user.set(contactId, {
+        users.set(contactId, {
           ...user,
           totalUnreadMessages: user.totalUnreadMessages + 1,
         });
@@ -230,3 +230,5 @@ export const getInitialContactsWithMessages = async (req, res, next) => {
     next(error);
   }
 };
+
+
