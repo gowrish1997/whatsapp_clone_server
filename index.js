@@ -135,7 +135,7 @@ app.get("/", (req, res) => {
     sameSite: "none",
     secure: true,
   });
-  res.setHeader("Cache-Control", "no-cache, no-store");
+  // res.setHeader("Cache-Control", "no-cache, no-store");
   res.status(200).json({ message: "Cookie has been set." });
 });
 
