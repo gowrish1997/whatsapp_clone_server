@@ -139,6 +139,12 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "Cookie has been set." });
 });
 
+app.post("/post", (req, res) => {
+  // res.setHeader("Cache-Control", "no-cache, no-store");
+  res
+    .status(200)
+    .json({ message: "just for checking purpose whether ir can push or not" });
+});
 app.listen(3005, () => {
   console.log("Server running on http://localhost:3005");
 });
