@@ -135,7 +135,7 @@ app.get("/", (req, res) => {
     sameSite: "none",
     secure: true,
   });
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type,X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding, stoken");
   res.status(200).json({ message: "Cookie has been set." });
 });
 
