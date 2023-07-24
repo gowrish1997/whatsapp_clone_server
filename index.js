@@ -129,7 +129,7 @@ const app = express();
 const allowedOrigins = ["http://localhost:3000", "http://client.example.com"];
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   res.cookie("sessionId", "abc123", { httpOnly: true, sameSite: "lax" });
   res.status(200).json({ message: "Cookie has been set." });
 });
